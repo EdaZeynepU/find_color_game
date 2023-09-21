@@ -29,17 +29,15 @@
         <div id="input-color-inputs">
             <label for="#color-red-range">Red</label>
             <input class="range-input" id="color-red-range" type="range" min="0" max="255" value="0"
-                onmousemove="$.funcRed(value)"><br>
+                onmousemove="$.funcRed(value)" onchange="$.funcRed(value)"><br>
             <label for="#color-green-range">Green</label>
             <input class="range-input" id="color-green-range" type="range" min="0" max="255" value="0"
-                onmousemove="$.funcGreen(value)"><br>
+                onmousemove="$.funcGreen(value)" onchange="$.funcGreen(value)"><br>
             <label for="#color-blue-range">Blue</label>
-
             <input class="range-input" id="color-blue-range" type="range" min="0" max="255" value="0"
-                onmousemove="$.funcBlue(value)"><br>
+                onmousemove="$.funcBlue(value)" onchange="$.funcBlue(value)"><br>
             <div id="input-color-p">
                 <span>rgb( </span>
-                <!-- <span id="color-red">0</span> -->
                 <input class="number-input" id="number-input-red" type="number" height="20px" width="50px" value="0"
                     onchange="$.funcRed(value)" />
                 , <input class="number-input" id="number-input-green" type="number" height="20px" width="50px" value="0"
