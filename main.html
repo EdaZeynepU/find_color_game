@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Color picking game</title>
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+            
+                <li><button class="btn" onclick="$.passColorFunc()">Pass (<span id="pass-count">3</span>)</button></li>
+            
+
+            <li>out of <span id="total-saved-color">0</span> colors</li>
+            <li>points: <span id="total-points">0</span></li>
+            
+                <li><button class="btn" id="save-game" onclick="$.calcPoints()">Save</button></li>
+            
+
+        </ul>
+    </div>
+    <div id="color-area">
+        <div id="target-color"></div>
+        <div id="input-color"></div>
+        <div id="input-color-inputs">
+            <label for="#color-red-range">Red</label>
+            <input class="range-input" id="color-red-range" type="range" min="0" max="255" value="0"
+                onmousemove="$.funcRed(value)"><br>
+            <label for="#color-green-range">Green</label>
+            <input class="range-input" id="color-green-range" type="range" min="0" max="255" value="0"
+                onmousemove="$.funcGreen(value)"><br>
+            <label for="#color-blue-range">Blue</label>
+
+            <input class="range-input" id="color-blue-range" type="range" min="0" max="255" value="0"
+                onmousemove="$.funcBlue(value)"><br>
+            <div id="input-color-p">
+                <span>rgb( </span>
+                <!-- <span id="color-red">0</span> -->
+                <input class="number-input" id="number-input-red" type="number" height="20px" width="50px" value="0"
+                    onchange="$.funcRed(value)" />
+                , <input class="number-input" id="number-input-green" type="number" height="20px" width="50px" value="0"
+                    onchange="$.funcGreen(value)" />
+                , <input class="number-input" id="number-input-blue" type="number" height="20px" width="50px" value="0"
+                    onchange="$.funcBlue(value)" />
+                )
+            </div>
+        </div>
+        <div id="game-result">
+            <h2>The total points: <span id="target-color-points"></span></h2><p>The color you were looking for: <span class="result-span" id="target-color-result"></span></p><p>The color you enter: <span class="result-span" id="input-color-result">54654</span></p>
+            <button class="btn" onclick="$.newGame()">next</button>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
